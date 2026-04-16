@@ -1,39 +1,40 @@
 const container = document.getElementById('radar-container');
 const buscador = document.getElementById('buscador');
-let todosDados = [];
+let store = [];
 
-async function carregar() {
+async function init() {
     try {
-        const res = await fetch('data/editais.json');
+        // Cache busting para garantir que pegamos o JSON mais novo
+        const res = await fetch(`data/editais.json?t=${new Date().getTime()}`);
         if (!res.ok) throw new Error();
-        todosDados = await res.json();
-        exibir(todosDados);
+        store = await res.json();
+        render(store);
     } catch {
-        container.innerHTML = `<div class="card"><div class="doc-name">Aguardando dados...</div><div class="date">O robô está processando as informações. Tente recarregar em instantes.</div></div>`;
+        container.innerHTML = `
+            <div class="card">
+                <div class="doc-name">Sincronizando dados...</div>
+                <div class="date">O robô está lendo o portal do IF Baiano agora. Atualize a página em 1 minuto.</div>
+            </div>`;
     }
 }
 
-function exibir(lista) {
-    if (lista.length === 0) {
-        container.innerHTML = "<p>Nenhum edital encontrado.</p>";
+function render(data) {
+    if (!data || data.length === 0) {
+        container.innerHTML = "<p style='text-align:center; grid-column: 1/-1;'>Nenhum edital recente encontrado no portal.</p>";
         return;
     }
-    container.innerHTML = lista.map(item => `
-        <a href="${item.link_edital}" target="_blank" class="card">
-            <h3>${item.edital}</h3>
-            <div class="doc-name">📄 ${item.documento}</div>
-            <div class="date">🕒 Publicado em: ${item.data_hora}</div>
+    container.innerHTML = data.map(i => `
+        <a href="${i.link_edital}" target="_blank" class="card">
+            <h3>${i.edital}</h3>
+            <div class="doc-name">📄 ${i.documento}</div>
+            <div class="date">🕒 Publicado em: ${i.data_hora}</div>
         </a>
     `).join('');
 }
 
 buscador.addEventListener('input', (e) => {
-    const termo = e.target.value.toLowerCase();
-    const filtrados = todosDados.filter(i => 
-        i.edital.toLowerCase().includes(termo) || 
-        i.documento.toLowerCase().includes(termo)
-    );
-    exibir(filtrados);
+    const val = e.target.value.toLowerCase();
+    render(store.filter(i => i.edital.toLowerCase().includes(val) || i.documento.toLowerCase().includes(val)));
 });
 
-carregar();
+init();
