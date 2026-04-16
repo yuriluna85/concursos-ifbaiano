@@ -1,36 +1,41 @@
 const container = document.getElementById('radar-container');
 const buscador = document.getElementById('buscador');
-const footerTime = document.getElementById('ultima-verificacao');
-let dados = [];
+const footerStatus = document.getElementById('ultima-verificacao');
+let dataStore = [];
 
-async function sync() {
+async function fetchData() {
     try {
-        const r = await fetch(`data/editais.json?nocache=${Date.now()}`);
-        dados = await r.json();
-        render(dados);
-        footerTime.innerText = "Última sincronização: " + new Date().toLocaleTimeString();
+        // Tenta ler o last_run para saber quando o robô rodou
+        const runRes = await fetch(`data/last_run.txt?t=${Date.now()}`);
+        const lastRun = await runRes.text();
+        footerStatus.innerText = "Última varredura do robô: " + lastRun;
+
+        // Carrega os editais
+        const res = await fetch(`data/editais.json?t=${Date.now()}`);
+        dataStore = await res.json();
+        render(dataStore);
     } catch {
-        container.innerHTML = "<div class='card'><div class='doc-name'>Aguardando primeira execução do robô...</div></div>";
+        container.innerHTML = "<div class='card'><div class='doc-name'>Robô em patrulha...</div><div class='date'>Aguardando a próxima atualização de 30 minutos.</div></div>";
     }
 }
 
 function render(list) {
     if (list.length === 0) {
-        container.innerHTML = "<p>Nenhum documento recente.</p>";
+        container.innerHTML = "<p style='text-align:center; grid-column:1/-1;'>O robô não encontrou atualizações nas últimas horas.</p>";
         return;
     }
     container.innerHTML = list.map(i => `
         <a href="${i.link_edital}" target="_blank" class="card">
             <h3>${i.edital}</h3>
             <div class="doc-name">📄 ${i.documento}</div>
-            <div class="date">🕒 ${i.data_hora}</div>
+            <div class="date">🕒 Postado em: ${i.data_hora}</div>
         </a>
     `).join('');
 }
 
 buscador.addEventListener('input', (e) => {
-    const v = e.target.value.toLowerCase();
-    render(dados.filter(i => i.edital.toLowerCase().includes(v) || i.documento.toLowerCase().includes(v)));
+    const term = e.target.value.toLowerCase();
+    render(dataStore.filter(i => i.edital.toLowerCase().includes(term) || i.documento.toLowerCase().includes(term)));
 });
 
-sync();
+fetchData();
