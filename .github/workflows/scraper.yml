@@ -2,8 +2,8 @@ name: Radar Scraper
 
 on:
   schedule:
-    - cron: '0 */4 * * *'  # Roda a cada 4 horas
-  workflow_dispatch:      # Botão manual
+    - cron: '0 */4 * * *'
+  workflow_dispatch:
 
 jobs:
   build:
