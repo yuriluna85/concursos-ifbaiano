@@ -3,28 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Radar de Concursos v1.0.4 - IF Baiano</title>
+    <title>Radar de Concursos v1.0.5 - IF Baiano</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>🔍 Radar de Concursos <span id="contador"></span></h1>
-            <p>Monitoramento DICOM - IF Baiano</p>
-            <input type="text" id="buscador" placeholder="Ex: Professor, Lapa, Resultado...">
+            <div class="badge-live">LIVE</div>
+            <h1>🔍 Radar de Concursos</h1>
+            <p>Os 10 documentos mais recentes do IF Baiano</p>
+            <input type="text" id="buscador" placeholder="Filtrar entre os últimos movimentos...">
         </div>
     </header>
 
     <main class="container">
         <div id="radar-container">
-            <div class="loader">Organizando editais...</div>
+            <div class="loader">Processando últimas atualizações...</div>
         </div>
     </main>
 
     <footer>
         <div class="container">
-            <p><strong>Versão 1.0.4</strong> | Status: Online</p>
-            <p>Dados extraídos do Portal de Concursos do IF Baiano</p>
+            <p><strong>Versão 1.0.5 (Performance)</strong> | Verificação a cada 30min</p>
+            <p id="ultima-verificacao"></p>
         </div>
     </footer>
 
