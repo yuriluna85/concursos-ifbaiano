@@ -1,1 +1,25 @@
-
+name: Radar Scraper
+on:
+  schedule:
+    - cron: '0 */4 * * *'
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+      - name: Install Dependencies
+        run: pip install requests beautifulsoup4
+      - name: Run Scraper
+        run: python scripts/crawler.py
+      - name: Commit and Push
+        run: |
+          git config --global user.name "GitHub Action"
+          git config --global user.email "action@github.com"
+          git add data/editais.json
+          git commit -m "Auto-update: $(date)" || exit 0
+          git push
