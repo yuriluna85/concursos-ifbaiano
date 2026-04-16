@@ -3,96 +3,105 @@ from bs4 import BeautifulSoup
 import json
 import re
 import os
-from datetime import datetime
+from datetime import datetime, timedelta
 from urllib.parse import urljoin
 
 HEADERS = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
 }
 
-BASE_URL = "https://concurso.ifbaiano.edu.br/portal/"
+BASE_URL = "https://ifbaiano.edu.br/portal/concursos/"
 
-def extrair_dados_edital(url):
+def tratar_data_relativa(texto_data):
+    """Converte 'Hoje às 09h00' ou 'Ontem às 10h00' em datetime real"""
+    agora = datetime.now()
+    texto_data = texto_data.lower()
+    
+    # Extrai a hora (ex: 09h23 -> 09:23)
+    match_hora = re.search(r'(\d{2})h(\d{2})', texto_data)
+    hora, minuto = (match_hora.groups()) if match_hora else (0, 0)
+    
+    if 'hoje' in texto_data:
+        data_base = agora
+    elif 'ontem' in texto_data:
+        data_base = agora - timedelta(days=1)
+    else:
+        # Se for data normal DD/MM/AAAA
+        match_data = re.search(r'(\d{2}/\d{2}/\d{4})', texto_data)
+        if match_data:
+            return datetime.strptime(f"{match_data.group(1)} {hora}:{minuto}", "%d/%m/%Y %H:%M")
+        return agora # Fallback
+
+    return data_base.replace(hour=int(hora), minute=int(minuto), second=0, microsecond=0)
+
+def extrair_titulo_rico(url):
+    """Entra no link para pegar o título completo do edital"""
     try:
-        # verify=False ajuda se o certificado SSL do portal estiver instável
-        response = requests.get(url, headers=HEADERS, timeout=20, verify=True)
-        response.encoding = 'utf-8'
-        soup = BeautifulSoup(response.text, 'html.parser')
-
-        titulo = soup.find('h1').get_text(strip=True) if soup.find('h1') else "Sem Título"
+        res = requests.get(url, headers=HEADERS, timeout=15)
+        res.encoding = 'utf-8'
+        soup = BeautifulSoup(res.text, 'html.parser')
         
-        docs = []
-        # O IF Baiano costuma usar tabelas ou listas para os editais
-        elementos_busca = soup.find_all(['tr', 'li', 'p'])
+        # Procura o título principal. Geralmente é o H1 ou o primeiro strong no topo
+        titulo = soup.find('h1').get_text(strip=True) if soup.find('h1') else ""
         
-        for el in elementos_busca:
-            texto = el.get_text(separator=' ', strip=True)
-            # Regex ajustada para o padrão: 14/04/2026 às 09h11
-            match = re.search(r'(\d{2}/\d{2}/\d{4})\s+às\s+(\d{2}h\d{2})', texto)
-            link = el.find('a', href=True)
-
-            if match and link:
-                href_doc = link['href'].lower()
-                # Só pega se for arquivo
-                if href_doc.endswith(('.pdf', '.docx', '.odt', '.doc', '.zip')):
-                    hora_limpa = match.group(2).replace('h', ':')
-                    try:
-                        data_obj = datetime.strptime(f"{match.group(1)} {hora_limpa}", "%d/%m/%Y %H:%M")
-                        docs.append({
-                            "edital": titulo,
-                            "documento": link.get_text(strip=True),
-                            "link_doc": urljoin(url, link['href']),
-                            "link_edital": url,
-                            "data_hora": f"{match.group(1)} às {match.group(2)}",
-                            "timestamp": data_obj.timestamp()
-                        })
-                    except: continue
-        
-        if docs:
-            docs.sort(key=lambda x: x['timestamp'], reverse=True)
-            return docs[0]
-        return None
-    except Exception as e:
-        print(f"Erro no edital {url}: {e}")
-        return None
+        # Se o H1 for genérico, tenta pegar o primeiro parágrafo em negrito (comum no IF)
+        if "Edital" in titulo and len(titulo) < 20:
+            extra = soup.find('strong')
+            if extra: titulo = extra.get_text(strip=True)
+            
+        return titulo if titulo else "Edital de Concurso"
+    except:
+        return "Edital (Erro ao acessar)"
 
 def run():
-    print(f"🚀 Iniciando busca em: {BASE_URL}")
+    print(f"🚀 Iniciando busca inteligente em: {BASE_URL}")
     try:
-        res = requests.get(BASE_URL, headers=HEADERS, timeout=20)
-        soup = BeautifulSoup(res.text, 'html.parser')
-        links_editais = set()
-
-        for a in soup.find_all('a', href=True):
-            href = a['href']
-            # Agora aceitamos links que contenham 'portal' e terminem com /
-            full_link = urljoin(BASE_URL, href)
-            
-            # Garante que o link é interno do portal e não é a raiz
-            if full_link.startswith(BASE_URL) and full_link != BASE_URL:
-                if href.endswith('/') and not href.startswith('?'):
-                    links_editais.add(full_link)
-        
-        print(f"🔍 Encontrados {len(links_editais)} editais potenciais.")
-
+        response = requests.get(BASE_URL, headers=HEADERS, timeout=30)
+        soup = BeautifulSoup(response.text, 'html.parser')
         resultados = []
-        for idx, link in enumerate(list(links_editais)):
-            print(f"[{idx+1}/{len(links_editais)}] Analisando: {link}")
-            dados = extrair_dados_edital(link)
-            if dados:
-                print(f"   ✅ Documento encontrado: {dados['documento']}")
-                resultados.append(dados)
 
+        # Procura os blocos de editais na página inicial
+        itens = soup.find_all(['div', 'li', 'tr'], class_=re.compile(r'post|edital|item'))
+
+        for item in itens:
+            links = item.find_all('a', href=True)
+            texto_todo = item.get_text(separator=' ', strip=True)
+            
+            # Detecta se há uma data (relativa ou absoluta)
+            if any(palavra in texto_todo.lower() for palavra in ['hoje', 'ontem', '/202']):
+                link_edital = links[0]['href']
+                
+                print(f"🔎 Refinando: {link_edital}")
+                
+                # BUSCA O TÍTULO RICO (Acessando o link)
+                titulo_completo = extrair_titulo_rico(link_edital)
+                
+                # Pega o nome do documento (geralmente o texto do último link)
+                nome_doc = links[-1].get_text(strip=True)
+                link_doc = links[-1]['href']
+
+                # Processa a data/hora para ordenação
+                dt_obj = tratar_data_relativa(texto_todo)
+
+                resultados.append({
+                    "edital": titulo_completo,
+                    "documento": nome_doc,
+                    "link_doc": urljoin(link_edital, link_doc),
+                    "link_edital": link_edital,
+                    "data_hora": dt_obj.strftime("%d/%m/%Y às %H:%M"),
+                    "timestamp": dt_obj.timestamp()
+                })
+
+        # Ordenação e salvamento
         resultados.sort(key=lambda x: x['timestamp'], reverse=True)
-
         os.makedirs('data', exist_ok=True)
         with open('data/editais.json', 'w', encoding='utf-8') as f:
             json.dump(resultados, f, ensure_ascii=False, indent=4)
         
-        print(f"🏁 Fim! {len(resultados)} editais com documentos novos.")
+        print(f"🏁 Finalizado! {len(resultados)} editais processados com títulos ricos.")
 
     except Exception as e:
-        print(f"🚨 Erro na raiz: {e}")
+        print(f"🚨 Erro: {e}")
 
 if __name__ == "__main__":
     run()
