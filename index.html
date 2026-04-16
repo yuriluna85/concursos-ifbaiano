@@ -3,29 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Radar de Concursos v1.0.7 - IF Baiano</title>
+    <title>Radar de Concursos v2.0 - IF Baiano</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <div class="container">
-            <div class="version-tag">STABLE v1.0.7</div>
+            <div class="version-tag">RADAR DICOM v2.0 (API WP)</div>
             <h1>🔍 Radar de Concursos</h1>
-            <p>Monitoramento DICOM - Instituto Federal Baiano</p>
-            <input type="text" id="buscador" placeholder="Busque por cargo ou unidade...">
+            <p>Os 10 movimentos mais recentes do Instituto Federal Baiano</p>
+            <input type="text" id="buscador" placeholder="Busque por título ou documento...">
         </div>
     </header>
 
     <main class="container">
         <div id="radar-container">
-            <div class="loader">Sincronizando com o portal...</div>
+            <div class="loader">Verificando banco de dados do portal...</div>
         </div>
     </main>
 
     <footer>
         <div class="container">
-            <p><strong>Radar v1.0.7</strong> | IF Baiano</p>
-            <p id="status-txt">Iniciando sistema...</p>
+            <p><strong>IF Baiano</strong> | Atualização a cada 30 minutos</p>
+            <p id="status-txt">Sincronizando via API...</p>
         </div>
     </footer>
 
