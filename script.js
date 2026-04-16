@@ -4,7 +4,7 @@ let todosEditais = [];
 
 async function carregarDados() {
     try {
-        const response = await fetch('data/editais.json');
+        const response = await fetch('./data/editais.json');
         todosEditais = await response.json();
         renderizar(todosEditais);
     } catch (e) {
