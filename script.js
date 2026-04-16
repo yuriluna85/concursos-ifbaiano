@@ -9,7 +9,7 @@ async function sync() {
         if (resRun.ok) {
             const text = await resRun.text();
             if (!text.includes("<!DOCTYPE html>")) {
-                statusTxt.innerText = "Última sincronização WP: " + text;
+                statusTxt.innerText = "Última atualização do sistema: " + text;
             }
         }
 
@@ -33,7 +33,6 @@ function render(list) {
         return;
     }
     
-    // Agora o card tem dois botões: um para o PDF e outro para a página do Edital
     container.innerHTML = list.map(i => `
         <div class="card">
             <h3>${i.edital}</h3>
