@@ -1,29 +1,27 @@
 const container = document.getElementById('radar-container');
 const buscador = document.getElementById('buscador');
-let dadosOriginais = [];
+let todosDados = [];
 
-async function carregarDados() {
+async function carregar() {
     try {
         const res = await fetch('data/editais.json');
         if (!res.ok) throw new Error();
-        dadosOriginais = await res.json();
-        renderizar(dadosOriginais);
+        todosDados = await res.json();
+        exibir(todosDados);
     } catch {
-        container.innerHTML = `<div class="card"><div class="doc-name">Nenhum dado encontrado ainda.</div><div class="date">Aguarde o robô processar...</div></div>`;
+        container.innerHTML = `<div class="card"><div class="doc-name">Aguardando dados...</div><div class="date">O robô está processando as informações. Tente recarregar em instantes.</div></div>`;
     }
 }
 
-function renderizar(lista) {
+function exibir(lista) {
     if (lista.length === 0) {
-        container.innerHTML = "<p>Nenhum edital encontrado para sua busca.</p>";
+        container.innerHTML = "<p>Nenhum edital encontrado.</p>";
         return;
     }
     container.innerHTML = lista.map(item => `
         <a href="${item.link_edital}" target="_blank" class="card">
-            <div>
-                <h3>${item.edital}</h3>
-                <div class="doc-name">📄 ${item.documento}</div>
-            </div>
+            <h3>${item.edital}</h3>
+            <div class="doc-name">📄 ${item.documento}</div>
             <div class="date">🕒 Publicado em: ${item.data_hora}</div>
         </a>
     `).join('');
@@ -31,11 +29,11 @@ function renderizar(lista) {
 
 buscador.addEventListener('input', (e) => {
     const termo = e.target.value.toLowerCase();
-    const filtrados = dadosOriginais.filter(i => 
+    const filtrados = todosDados.filter(i => 
         i.edital.toLowerCase().includes(termo) || 
         i.documento.toLowerCase().includes(termo)
     );
-    renderizar(filtrados);
+    exibir(filtrados);
 });
 
-carregarDados();
+carregar();
