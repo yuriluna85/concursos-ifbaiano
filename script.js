@@ -1,32 +1,37 @@
 const container = document.getElementById('radar-container');
 const buscador = document.getElementById('buscador');
-let todosEditais = [];
+let dadosOriginais = [];
 
 async function carregarDados() {
     try {
-        const response = await fetch('./data/editais.json');
-        todosEditais = await response.json();
-        renderizar(todosEditais);
-    } catch (e) {
-        container.innerHTML = "<p>Erro ao carregar dados. Tente novamente mais tarde.</p>";
+        const res = await fetch('data/editais.json');
+        if (!res.ok) throw new Error();
+        dadosOriginais = await res.json();
+        renderizar(dadosOriginais);
+    } catch {
+        container.innerHTML = `<div class="card"><div class="doc-name">Nenhum dado encontrado ainda.</div><div class="date">Aguarde o robô processar...</div></div>`;
     }
 }
 
 function renderizar(lista) {
+    if (lista.length === 0) {
+        container.innerHTML = "<p>Nenhum edital encontrado para sua busca.</p>";
+        return;
+    }
     container.innerHTML = lista.map(item => `
         <a href="${item.link_edital}" target="_blank" class="card">
             <div>
                 <h3>${item.edital}</h3>
                 <div class="doc-name">📄 ${item.documento}</div>
             </div>
-            <div class="date">📅 Postado em: ${item.data_hora}</div>
+            <div class="date">🕒 Publicado em: ${item.data_hora}</div>
         </a>
     `).join('');
 }
 
 buscador.addEventListener('input', (e) => {
     const termo = e.target.value.toLowerCase();
-    const filtrados = todosEditais.filter(i => 
+    const filtrados = dadosOriginais.filter(i => 
         i.edital.toLowerCase().includes(termo) || 
         i.documento.toLowerCase().includes(termo)
     );
