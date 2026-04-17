@@ -1,5 +1,21 @@
 [
     {
+        "edital": "Edital de Remoção",
+        "documento": "Retificação do Resultado Preliminar de Classificação &#8211; Chamada de Remoção nº 10/2026 &#8211; Docente",
+        "link_edital": "https://concurso.ifbaiano.edu.br/portal/remocao-novembro-2018/",
+        "link_doc": "https://concurso.ifbaiano.edu.br/portal/remocao-novembro-2018/wp-content/uploads/sites/211/2026/04/Retificacao-Resultado-Preliminar-Classificacao.pdf",
+        "data_hora": "Hoje às 14h54",
+        "timestamp": 1776437654.0
+    },
+    {
+        "edital": "Seleção Simplificada de Estudantes para o PartiuIF – Fevereiro 2026",
+        "documento": "Convocação para Matrícula – 4ª Chamada",
+        "link_edital": "https://concurso.ifbaiano.edu.br/portal/selecao-estudantes-partiuif-fevereiro-2026/",
+        "link_doc": "https://concurso.ifbaiano.edu.br/portal/selecao-estudantes-partiuif-fevereiro-2026/wp-content/uploads/sites/1300/2026/04/Convocacao-4a-chamada_com-anexos.pdf",
+        "data_hora": "Hoje às 14h52",
+        "timestamp": 1776437522.0
+    },
+    {
         "edital": "Concessão de Bolsas de Iniciação Científica Júnior – PIBIC-EM/IF Baiano – Março 2026",
         "documento": "1ª retificação do edital nº 44",
         "link_edital": "https://concurso.ifbaiano.edu.br/portal/bolsa-junior-pibic-marco-2026/",
@@ -62,21 +78,5 @@
         "link_doc": "https://concurso.ifbaiano.edu.br/portal/propac-bonfim-abril-2026/wp-content/uploads/sites/1346/2026/04/Propac-16.2026.pdf",
         "data_hora": "Hoje às 09h43",
         "timestamp": 1776419021.0
-    },
-    {
-        "edital": "Edital de Remoção",
-        "documento": "Resultado Preliminar de Classificação &#8211; Chamada nº 10/2026 &#8211; Docente",
-        "link_edital": "https://concurso.ifbaiano.edu.br/portal/remocao-novembro-2018/",
-        "link_doc": "https://concurso.ifbaiano.edu.br/portal/remocao-novembro-2018/wp-content/uploads/sites/211/2026/04/RESULTADO-PRELIMINAR-CLASSIFICACAO-1.pdf",
-        "data_hora": "Hoje às 09h25",
-        "timestamp": 1776417906.0
-    },
-    {
-        "edital": "Seleção de Tutores de Pares Bolsistas para Acompanhar Alunos Vinculados ao Núcleo de Atendimento às Pessoas com Necessidades Específicas – NAPNE – Campus Xique-Xique – Março 2026",
-        "documento": "Resultado preliminar das entrevistas &#8211; 2 etapa",
-        "link_edital": "https://concurso.ifbaiano.edu.br/portal/selecao-pares-tutor-bolsista-napne-xique-xique-marco-2026/",
-        "link_doc": "https://concurso.ifbaiano.edu.br/portal/selecao-pares-tutor-bolsista-napne-xique-xique-marco-2026/wp-content/uploads/sites/1318/2026/04/Resultado-preliminar-das-entrevistas-_2-etapa.pdf",
-        "data_hora": "Hoje às 09h19",
-        "timestamp": 1776417559.0
     }
 ]
