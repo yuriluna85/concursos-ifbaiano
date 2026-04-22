@@ -1,5 +1,13 @@
 [
     {
+        "edital": "Cursos de Qualificação Profissional – FIC – Campus Catu – Abril 2026",
+        "documento": "Lista Preliminar",
+        "link_edital": "https://concurso.ifbaiano.edu.br/portal/fic-catu-abril-2026/",
+        "link_doc": "https://concurso.ifbaiano.edu.br/portal/fic-catu-abril-2026/wp-content/uploads/sites/1329/2026/04/Lista-preliminar-de-classificados-curso-FIC-edital-68.2026.pdf",
+        "data_hora": "Hoje às 13h40",
+        "timestamp": 1776865208.0
+    },
+    {
         "edital": "Cursos de Qualificação Profissional – FIC – Campus Itaberaba – Abril 2026",
         "documento": "Resultado Preliminar",
         "link_edital": "https://concurso.ifbaiano.edu.br/portal/fic-itaberaba-abril-2026/",
@@ -70,13 +78,5 @@
         "link_doc": "https://concurso.ifbaiano.edu.br/portal/pibic-marco-2026/wp-content/uploads/sites/1315/2026/04/1a-retificacao-do-edital-no-42-de-11-de-marco-de-2026.pdf",
         "data_hora": "17/04/2026 às 14h09",
         "timestamp": 1776434943.0
-    },
-    {
-        "edital": "Processo Seletivo de Vagas Remanescentes para Ingresso de Estudantes no Curso de Pós-graduação Em Educação de Jovens e Adultos Articulada à Educação Profissional – Campus Santa Inês – Abril 2026",
-        "documento": "Resultado da Impugnação do Edital",
-        "link_edital": "https://concurso.ifbaiano.edu.br/portal/vagas-remanescentes-pos-eja-ep-santa-ines-abril-2026/",
-        "link_doc": "https://concurso.ifbaiano.edu.br/portal/vagas-remanescentes-pos-eja-ep-santa-ines-abril-2026/wp-content/uploads/sites/1340/2026/04/RESULTADO-DA-INTERPOSICAO-DE-RECURSO-AO-EDITAL-73-DE-2026.pdf",
-        "data_hora": "17/04/2026 às 14h07",
-        "timestamp": 1776434833.0
     }
 ]
