@@ -1,5 +1,37 @@
 [
     {
+        "edital": "Processo Seletivo para Concessão de Bolsas de Monitoria de Ensino da Educação Profissional Técnica de Nível Médio – Campus Xique-Xique – Abril 2026",
+        "documento": "Homologação das Inscrições",
+        "link_edital": "https://concurso.ifbaiano.edu.br/portal/concessao-bolsa-monitoria-eptnm-xique-xique-abril-2026/",
+        "link_doc": "https://concurso.ifbaiano.edu.br/portal/concessao-bolsa-monitoria-eptnm-xique-xique-abril-2026/wp-content/uploads/sites/1334/2026/04/HOMOLOGACAO-DAS-INSCRICOES-Monitoria.pdf",
+        "data_hora": "Hoje às 15h30",
+        "timestamp": 1776871834.0
+    },
+    {
+        "edital": "Seleção de Tutores de Pares Bolsistas para Acompanhar Alunos Vinculados ao Núcleo de Atendimento às Pessoas Com Necessidades Específicas – NAPNE – Cursos de Nível Médio Integrado – Campus Guanambi – Abril 2026",
+        "documento": "Homologação das Inscrições",
+        "link_edital": "https://concurso.ifbaiano.edu.br/portal/selecao-pares-tutor-bolsista-napne-integrado-guanambi-abril-2026/",
+        "link_doc": "https://concurso.ifbaiano.edu.br/portal/selecao-pares-tutor-bolsista-napne-integrado-guanambi-abril-2026/wp-content/uploads/sites/1325/2026/04/HOMOLOGACAO-DAS-INSCRICOES-EDITAL-No-172026-CURSOS-DE-NIVEL-MEDIO-INTEGRADO.pdf",
+        "data_hora": "Hoje às 15h28",
+        "timestamp": 1776871707.0
+    },
+    {
+        "edital": "Seleção de Tutores de Pares Bolsistas para Acompanhar Alunos Vinculados ao Núcleo de Atendimento às Pessoas Com Necessidades Específicas – NAPNE – Cursos Subsequentes e Superiores – Campus Guanambi – Abril 2026",
+        "documento": "Homologação das Inscrições",
+        "link_edital": "https://concurso.ifbaiano.edu.br/portal/selecao-pares-tutor-bolsista-napne-subsequente-e-superior-guanambi-abril-2026/",
+        "link_doc": "https://concurso.ifbaiano.edu.br/portal/selecao-pares-tutor-bolsista-napne-subsequente-e-superior-guanambi-abril-2026/wp-content/uploads/sites/1326/2026/04/HOMOLOGACAO-DAS-INSCRICOES-EDITAL-No-182026-CURSOS-SUBSEQUENTES-E-SUPERIORES.pdf",
+        "data_hora": "Hoje às 15h28",
+        "timestamp": 1776871698.0
+    },
+    {
+        "edital": "Processo Seletivo Simplificado para Contratação de Professor Substituto – Campus Xique-Xique – Março 2026",
+        "documento": "Resultado final",
+        "link_edital": "https://concurso.ifbaiano.edu.br/portal/substituto-xique-xique-marco-2026/",
+        "link_doc": "https://concurso.ifbaiano.edu.br/portal/substituto-xique-xique-marco-2026/wp-content/uploads/sites/1323/2026/04/15.-Resultado-final.pdf",
+        "data_hora": "Hoje às 15h08",
+        "timestamp": 1776870506.0
+    },
+    {
         "edital": "Programa de Apoio à Qualificação de Servidores – PAQ – IF Baiano – 2026",
         "documento": "Julgamento de Recursos de Impugnação do Edital",
         "link_edital": "https://concurso.ifbaiano.edu.br/portal/paq-2026/",
@@ -46,37 +78,5 @@
         "link_doc": "https://concurso.ifbaiano.edu.br/portal/selecao-estudantes-partiuif-fevereiro-2026/wp-content/uploads/sites/1300/2026/04/Convocacao-4a-chamada_com-anexos.pdf",
         "data_hora": "17/04/2026 às 14h52",
         "timestamp": 1776437522.0
-    },
-    {
-        "edital": "Concessão de Bolsas de Iniciação Científica Júnior – PIBIC-EM/IF Baiano – Março 2026",
-        "documento": "1ª retificação do edital nº 44",
-        "link_edital": "https://concurso.ifbaiano.edu.br/portal/bolsa-junior-pibic-marco-2026/",
-        "link_doc": "https://concurso.ifbaiano.edu.br/portal/bolsa-junior-pibic-marco-2026/wp-content/uploads/sites/1317/2026/04/1a-retificacao-do-edital-no-44-de-11-de-marco-de-2026.pdf",
-        "data_hora": "17/04/2026 às 14h27",
-        "timestamp": 1776436068.0
-    },
-    {
-        "edital": "Processo de Seleção Pública Simplificada para Docente do Curso de Segunda Licenciatura em Educação Especial Inclusiva do PARFOR Equidade – IF Baiano – Abril 2026",
-        "documento": "Edital nº 82",
-        "link_edital": "https://concurso.ifbaiano.edu.br/portal/parfor-equidade-docente-educacao-especial-abril-2026/",
-        "link_doc": "https://concurso.ifbaiano.edu.br/portal/parfor-equidade-docente-educacao-especial-abril-2026/wp-content/uploads/sites/1345/2026/04/Edital-82-Parfor-Equidade-.pdf",
-        "data_hora": "17/04/2026 às 14h17",
-        "timestamp": 1776435437.0
-    },
-    {
-        "edital": "Concessão de Bolsas de Iniciação Tecnológica (PIBITI/IF Baiano) – Março 2026",
-        "documento": "1ª retificação do edital nº 43",
-        "link_edital": "https://concurso.ifbaiano.edu.br/portal/bolsas-pibiti-marco-2026/",
-        "link_doc": "https://concurso.ifbaiano.edu.br/portal/bolsas-pibiti-marco-2026/wp-content/uploads/sites/1316/2026/04/1a-retificacao-do-edital-no-43-de-11-de-marco-de-2026.pdf",
-        "data_hora": "17/04/2026 às 14h12",
-        "timestamp": 1776435145.0
-    },
-    {
-        "edital": "Concessão de Bolsas de Iniciação Científica – PIBIC/IF Baiano – Março 2026",
-        "documento": "1ª Retificação do edital nº 42",
-        "link_edital": "https://concurso.ifbaiano.edu.br/portal/pibic-marco-2026/",
-        "link_doc": "https://concurso.ifbaiano.edu.br/portal/pibic-marco-2026/wp-content/uploads/sites/1315/2026/04/1a-retificacao-do-edital-no-42-de-11-de-marco-de-2026.pdf",
-        "data_hora": "17/04/2026 às 14h09",
-        "timestamp": 1776434943.0
     }
 ]
