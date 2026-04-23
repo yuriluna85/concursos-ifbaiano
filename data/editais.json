@@ -1,5 +1,21 @@
 [
     {
+        "edital": "Processo Seletivo Simplificado para Contratação de Professor Substituto – Campus Santa Inês – Abril 2026",
+        "documento": "Relação Preliminar das Inscrições",
+        "link_edital": "https://concurso.ifbaiano.edu.br/portal/substituto-santa-ines-abril-2026/",
+        "link_doc": "https://concurso.ifbaiano.edu.br/portal/substituto-santa-ines-abril-2026/wp-content/uploads/sites/1328/2026/04/Relacao-Preliminar-das-Inscricoes.pdf",
+        "data_hora": "Hoje às 10h37",
+        "timestamp": 1776940639.0
+    },
+    {
+        "edital": "Seleção Simplificada de Estudantes para o PartiuIF – Fevereiro 2026",
+        "documento": "Convocação para Matrícula – 5ª Chamada",
+        "link_edital": "https://concurso.ifbaiano.edu.br/portal/selecao-estudantes-partiuif-fevereiro-2026/",
+        "link_doc": "https://concurso.ifbaiano.edu.br/portal/selecao-estudantes-partiuif-fevereiro-2026/wp-content/uploads/sites/1300/2026/04/Convocacao-5a-Chamada_com-anexos.pdf",
+        "data_hora": "Hoje às 10h01",
+        "timestamp": 1776938498.0
+    },
+    {
         "edital": "Processo Seletivo de Vagas Remanescentes para Ingresso de Estudantes no Curso de Pós-graduação Em Educação de Jovens e Adultos Articulada à Educação Profissional – Campus Santa Inês – Abril 2026",
         "documento": "Lista Preliminar de Matriculados",
         "link_edital": "https://concurso.ifbaiano.edu.br/portal/vagas-remanescentes-pos-eja-ep-santa-ines-abril-2026/",
@@ -62,21 +78,5 @@
         "link_doc": "https://concurso.ifbaiano.edu.br/portal/substituto-xique-xique-marco-2026/wp-content/uploads/sites/1323/2026/04/15.-Resultado-final.pdf",
         "data_hora": "Ontem às 15h08",
         "timestamp": 1776870506.0
-    },
-    {
-        "edital": "Programa de Apoio à Qualificação de Servidores – PAQ – IF Baiano – 2026",
-        "documento": "Julgamento de Recursos de Impugnação do Edital",
-        "link_edital": "https://concurso.ifbaiano.edu.br/portal/paq-2026/",
-        "link_doc": "https://concurso.ifbaiano.edu.br/portal/paq-2026/wp-content/uploads/sites/1343/2026/04/Julgamento-de-Recursos-de-Impugnacao-do-Edital-do-PAQ-2026.pdf",
-        "data_hora": "Ontem às 14h40",
-        "timestamp": 1776868841.0
-    },
-    {
-        "edital": "Cursos de Qualificação Profissional – FIC – Campus Catu – Abril 2026",
-        "documento": "Lista Preliminar",
-        "link_edital": "https://concurso.ifbaiano.edu.br/portal/fic-catu-abril-2026/",
-        "link_doc": "https://concurso.ifbaiano.edu.br/portal/fic-catu-abril-2026/wp-content/uploads/sites/1329/2026/04/Lista-preliminar-de-classificados-curso-FIC-edital-68.2026.pdf",
-        "data_hora": "Ontem às 13h40",
-        "timestamp": 1776865208.0
     }
 ]
