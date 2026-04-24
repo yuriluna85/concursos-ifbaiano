@@ -1,5 +1,21 @@
 [
     {
+        "edital": "Cursos de Qualificação Profissional – FIC – Campus Catu – Abril 2026",
+        "documento": "Nota Informativa &#8211; Alteração de Cronograma",
+        "link_edital": "https://concurso.ifbaiano.edu.br/portal/fic-catu-abril-2026/",
+        "link_doc": "https://concurso.ifbaiano.edu.br/portal/fic-catu-abril-2026/wp-content/uploads/sites/1329/2026/04/Nota-Informativa-Alteracao-de-Cronograma.pdf",
+        "data_hora": "Hoje às 15h26",
+        "timestamp": 1777044385.0
+    },
+    {
+        "edital": "Processo Seletivo de Vagas Remanescentes para Ingresso de Estudantes no Curso de Pós-graduação Em Educação de Jovens e Adultos Articulada à Educação Profissional – Campus Santa Inês – Abril 2026",
+        "documento": "Lista Final de Matriculados(as)",
+        "link_edital": "https://concurso.ifbaiano.edu.br/portal/vagas-remanescentes-pos-eja-ep-santa-ines-abril-2026/",
+        "link_doc": "https://concurso.ifbaiano.edu.br/portal/vagas-remanescentes-pos-eja-ep-santa-ines-abril-2026/wp-content/uploads/sites/1340/2026/04/Lista-Final-de-matriculadosas-PGEJA.pdf",
+        "data_hora": "Hoje às 14h54",
+        "timestamp": 1777042475.0
+    },
+    {
         "edital": "Seleção de Tutores de Pares Bolsistas para Acompanhar Alunos Vinculados ao Núcleo de Atendimento às Pessoas com Necessidades Específicas – NAPNE – Campus Xique-Xique – Março 2026",
         "documento": "Resultado Final",
         "link_edital": "https://concurso.ifbaiano.edu.br/portal/selecao-pares-tutor-bolsista-napne-xique-xique-marco-2026/",
@@ -40,14 +56,6 @@
         "timestamp": 1776938498.0
     },
     {
-        "edital": "Processo Seletivo de Vagas Remanescentes para Ingresso de Estudantes no Curso de Pós-graduação Em Educação de Jovens e Adultos Articulada à Educação Profissional – Campus Santa Inês – Abril 2026",
-        "documento": "Lista Preliminar de Matriculados",
-        "link_edital": "https://concurso.ifbaiano.edu.br/portal/vagas-remanescentes-pos-eja-ep-santa-ines-abril-2026/",
-        "link_doc": "https://concurso.ifbaiano.edu.br/portal/vagas-remanescentes-pos-eja-ep-santa-ines-abril-2026/wp-content/uploads/sites/1340/2026/04/LISTA-PRELIMINAR-DE-MATRICULADOS-PGEJA-EDITAL-73-DE-2026.pdf",
-        "data_hora": "Ontem às 08h55",
-        "timestamp": 1776934522.0
-    },
-    {
         "edital": "Processo Seletivo Simplificado para Estagiários de Nível Superior – Campus Serrinha – Março 2026",
         "documento": "Resultado Banca de Heteroidentificação",
         "link_edital": "https://concurso.ifbaiano.edu.br/portal/processo-seletivo-estagio-serrinha-marco-2026/",
@@ -70,13 +78,5 @@
         "link_doc": "https://concurso.ifbaiano.edu.br/portal/concessao-bolsa-monitoria-eptnm-xique-xique-abril-2026/wp-content/uploads/sites/1334/2026/04/HOMOLOGACAO-DAS-INSCRICOES-Monitoria.pdf",
         "data_hora": "22/04/2026 às 15h30",
         "timestamp": 1776871834.0
-    },
-    {
-        "edital": "Seleção de Tutores de Pares Bolsistas para Acompanhar Alunos Vinculados ao Núcleo de Atendimento às Pessoas Com Necessidades Específicas – NAPNE – Cursos de Nível Médio Integrado – Campus Guanambi – Abril 2026",
-        "documento": "Homologação das Inscrições",
-        "link_edital": "https://concurso.ifbaiano.edu.br/portal/selecao-pares-tutor-bolsista-napne-integrado-guanambi-abril-2026/",
-        "link_doc": "https://concurso.ifbaiano.edu.br/portal/selecao-pares-tutor-bolsista-napne-integrado-guanambi-abril-2026/wp-content/uploads/sites/1325/2026/04/HOMOLOGACAO-DAS-INSCRICOES-EDITAL-No-172026-CURSOS-DE-NIVEL-MEDIO-INTEGRADO.pdf",
-        "data_hora": "22/04/2026 às 15h28",
-        "timestamp": 1776871707.0
     }
 ]
