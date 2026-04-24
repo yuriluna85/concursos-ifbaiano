@@ -1,5 +1,21 @@
 [
     {
+        "edital": "Programa de Apoio à Qualificação de Servidores – PAQ – IF Baiano – 2026",
+        "documento": "Portaria nº 147 &#8211; Homologa o Edital Interno n° Edital nº 79, de 16 de abril de 2026 (PAQ 2026)",
+        "link_edital": "https://concurso.ifbaiano.edu.br/portal/paq-2026/",
+        "link_doc": "https://concurso.ifbaiano.edu.br/portal/paq-2026/wp-content/uploads/sites/1343/2026/04/Portaria-no-147-Homologa-o-Edital-Interno-n°-Edital-no-79-de-16-de-abril-de-2026-PAQ-2026.pdf",
+        "data_hora": "Hoje às 16h27",
+        "timestamp": 1777048053.0
+    },
+    {
+        "edital": "Cursos de Qualificação Profissional – FIC – Campus Itaberaba – Abril 2026",
+        "documento": "Edital de Matricula",
+        "link_edital": "https://concurso.ifbaiano.edu.br/portal/fic-itaberaba-abril-2026/",
+        "link_doc": "https://concurso.ifbaiano.edu.br/portal/fic-itaberaba-abril-2026/wp-content/uploads/sites/1338/2026/04/Edital-de-Matricula-FIC-Itaberaba.pdf",
+        "data_hora": "Hoje às 16h17",
+        "timestamp": 1777047422.0
+    },
+    {
         "edital": "Cursos de Qualificação Profissional – FIC – Campus Catu – Abril 2026",
         "documento": "Nota Informativa &#8211; Alteração de Cronograma",
         "link_edital": "https://concurso.ifbaiano.edu.br/portal/fic-catu-abril-2026/",
@@ -62,21 +78,5 @@
         "link_doc": "https://concurso.ifbaiano.edu.br/portal/processo-seletivo-estagio-serrinha-marco-2026/wp-content/uploads/sites/1320/2026/04/Resultado-Banca-de-Heteroidentificacao.pdf",
         "data_hora": "Ontem às 08h53",
         "timestamp": 1776934427.0
-    },
-    {
-        "edital": "redenciamento de entidades para realizar acordo de cooperação técnica para oferta de cursos de educação a distância do IF Baiano – Abril 2026",
-        "documento": "Edital nº 17",
-        "link_edital": "https://concurso.ifbaiano.edu.br/portal/chamada-publica-polos-ead-abril-2026/",
-        "link_doc": "https://concurso.ifbaiano.edu.br/portal/chamada-publica-polos-ead-abril-2026/wp-content/uploads/sites/1348/2026/04/Edital-17.2026.pdf",
-        "data_hora": "22/04/2026 às 16h42",
-        "timestamp": 1776876172.0
-    },
-    {
-        "edital": "Processo Seletivo para Concessão de Bolsas de Monitoria de Ensino da Educação Profissional Técnica de Nível Médio – Campus Xique-Xique – Abril 2026",
-        "documento": "Homologação das Inscrições",
-        "link_edital": "https://concurso.ifbaiano.edu.br/portal/concessao-bolsa-monitoria-eptnm-xique-xique-abril-2026/",
-        "link_doc": "https://concurso.ifbaiano.edu.br/portal/concessao-bolsa-monitoria-eptnm-xique-xique-abril-2026/wp-content/uploads/sites/1334/2026/04/HOMOLOGACAO-DAS-INSCRICOES-Monitoria.pdf",
-        "data_hora": "22/04/2026 às 15h30",
-        "timestamp": 1776871834.0
     }
 ]
