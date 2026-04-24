@@ -1,5 +1,13 @@
 [
     {
+        "edital": "Edital de Remoção",
+        "documento": "Homologação do Resultado Final &#8211; Chamada nº 10/2026 &#8211; Docente",
+        "link_edital": "https://concurso.ifbaiano.edu.br/portal/remocao-novembro-2018/",
+        "link_doc": "https://concurso.ifbaiano.edu.br/portal/remocao-novembro-2018/wp-content/uploads/sites/211/2026/04/HOMOLOGACAO-RESULTADO-FINAL-2.pdf",
+        "data_hora": "Hoje às 09h03",
+        "timestamp": 1777021439.0
+    },
+    {
         "edital": "Cursos de Qualificação Profissional – FIC – Campus Valença – Março 2026",
         "documento": "Lista de Espera p/ O gênero textual Redação do Enem",
         "link_edital": "https://concurso.ifbaiano.edu.br/portal/fic-valenca-marco-2026/",
@@ -70,13 +78,5 @@
         "link_doc": "https://concurso.ifbaiano.edu.br/portal/selecao-pares-tutor-bolsista-napne-subsequente-e-superior-guanambi-abril-2026/wp-content/uploads/sites/1326/2026/04/HOMOLOGACAO-DAS-INSCRICOES-EDITAL-No-182026-CURSOS-SUBSEQUENTES-E-SUPERIORES.pdf",
         "data_hora": "22/04/2026 às 15h28",
         "timestamp": 1776871698.0
-    },
-    {
-        "edital": "Processo Seletivo Simplificado para Contratação de Professor Substituto – Campus Xique-Xique – Março 2026",
-        "documento": "Resultado final",
-        "link_edital": "https://concurso.ifbaiano.edu.br/portal/substituto-xique-xique-marco-2026/",
-        "link_doc": "https://concurso.ifbaiano.edu.br/portal/substituto-xique-xique-marco-2026/wp-content/uploads/sites/1323/2026/04/15.-Resultado-final.pdf",
-        "data_hora": "22/04/2026 às 15h08",
-        "timestamp": 1776870506.0
     }
 ]
